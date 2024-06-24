@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        
         body {
             margin: 0;
             padding: 0;
@@ -87,12 +89,20 @@
         }
 
         .neon-box {
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.1);
             border: 2px solid #00ffff;
-            box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
             padding: 45px; /* Increase size by 1.5x */
             border-radius: 15px;
             display: inline-block;
+            animation: neonGlow 2s infinite;
+        }
+
+        @keyframes neonGlow {
+            0% { box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff; }
+            25% { box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000; }
+            50% { box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00; }
+            75% { box-shadow: 0 0 20px #0000ff, 0 0 40px #0000ff, 0 0 60px #0000ff; }
+            100% { box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff; }
         }
 
         .circle {
@@ -115,8 +125,25 @@
             margin-top: 20px;
             font-size: 50px; /* Increase size by 1.5x */
             color: white;
+            font-family: 'Pacifico', cursive;
             text-shadow: 0 0 10px #ff9900, 0 0 20px #ff9900, 0 0 30px #ff9900;
             position: relative;
+        }
+
+        .glow-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 20px;
+            color: white;
+            border: 2px solid #00ffff;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: box-shadow 0.5s;
+        }
+
+        .glow-button:hover {
+            box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
         }
 
         .stars {
@@ -172,6 +199,7 @@
                 <img src="https://telegra.ph/file/297daf535e6eade503f47.jpg" alt="Profile Picture">
             </div>
             <div class="name">SHALINI</div>
+            <button class="glow-button" onclick="window.open('https://instagram.com/Itz_Shalini.69', '_blank')">Instagram</button>
         </div>
     </div>
     <div class="stars"></div>
@@ -206,7 +234,7 @@
             }, 40000); // Adjust this duration to match the animation duration
         }
 
-        setInterval(createStar, 900); // Increase the number of stars
+        setInterval(createStar, 500); // Increase the number of stars
     </script>
 </body>
 </html>
