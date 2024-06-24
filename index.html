@@ -10,23 +10,19 @@
             margin: 0;
             overflow: hidden;
             background: linear-gradient(135deg, #404040, #1b1b1b);
-            background-size: 200% 200%;
+            background-size: cover;
             transition: background 0.5s;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        @keyframes moveBackground {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            position: relative;
         }
 
         .toggle-container {
             position: absolute;
             top: 20px;
             left: 20px;
+            z-index: 2;
         }
 
         .switch {
@@ -141,11 +137,20 @@
         }
 
         @keyframes moveStar {
-            from {
+            0% {
                 transform: translate(0, 0);
             }
-            to {
-                transform: translate(calc(var(--moveX) * 1vw), calc(var(--moveY) * 1vh));
+            25% {
+                transform: translate(calc(var(--moveX1) * 1vw), calc(var(--moveY1) * 1vh));
+            }
+            50% {
+                transform: translate(calc(var(--moveX2) * 1vw), calc(var(--moveY2) * 1vh));
+            }
+            75% {
+                transform: translate(calc(var(--moveX3) * 1vw), calc(var(--moveY3) * 1vh));
+            }
+            100% {
+                transform: translate(calc(var(--moveX4) * 1vw), calc(var(--moveY4) * 1vh));
             }
         }
     </style>
@@ -182,8 +187,14 @@
             star.classList.add('star');
             star.style.left = Math.random() * 100 + 'vw';
             star.style.top = Math.random() * 100 + 'vh';
-            star.style.setProperty('--moveX', Math.random() * 10 - 5);
-            star.style.setProperty('--moveY', Math.random() * 10 - 5);
+            star.style.setProperty('--moveX1', Math.random() * 10 - 5);
+            star.style.setProperty('--moveY1', Math.random() * 10 - 5);
+            star.style.setProperty('--moveX2', Math.random() * 10 - 5);
+            star.style.setProperty('--moveY2', Math.random() * 10 - 5);
+            star.style.setProperty('--moveX3', Math.random() * 10 - 5);
+            star.style.setProperty('--moveY3', Math.random() * 10 - 5);
+            star.style.setProperty('--moveX4', Math.random() * 10 - 5);
+            star.style.setProperty('--moveY4', Math.random() * 10 - 5);
             document.querySelector('.stars').appendChild(star);
 
             setTimeout(() => {
@@ -195,4 +206,5 @@
     </script>
 </body>
 </html>
+
 
