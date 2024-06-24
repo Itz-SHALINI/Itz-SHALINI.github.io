@@ -139,12 +139,12 @@
             border: 2px solid #00ffff;
             border-radius: 10px;
             cursor: pointer;
+            box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
             transition: all 0.3s ease-in-out;
         }
 
-        .glow-button.clicked {
-            background-color: #4CAF50;
-            box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00;
+        .glow-button:hover {
+            box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
         }
 
         .stars {
@@ -200,7 +200,7 @@
                 <img src="https://telegra.ph/file/297daf535e6eade503f47.jpg" alt="Profile Picture">
             </div>
             <div class="name">SHALINI</div>
-            <button class="glow-button" onclick="followInstagram()">Follow on Instagram</button>
+            <button class="glow-button" onclick="window.open('https://www.instagram.com/Itz_Shalini.69/', '_blank')">Follow on Instagram</button>
         </div>
     </div>
     <div class="stars"></div>
@@ -233,14 +233,6 @@
 
         for (let i = 0; i < 50; i++) {
             createStar();
-        }
-
-        function followInstagram() {
-            const button = document.querySelector('.glow-button');
-            button.classList.add('clicked');
-            setTimeout(() => {
-                button.classList.remove('clicked');
-            }, 1000); // Adjust duration as needed
         }
     </script>
 </body>
