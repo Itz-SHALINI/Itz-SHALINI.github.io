@@ -83,20 +83,21 @@
         .container {
             text-align: center;
             z-index: 1;
+            margin-top: 100px; /* Move the container down */
         }
 
         .neon-box {
             background: rgba(0, 0, 0, 0.6);
             border: 2px solid #00ffff;
             box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
-            padding: 40px;
+            padding: 60px; /* Increase size by 1.5x */
             border-radius: 15px;
             display: inline-block;
         }
 
         .circle {
-            width: 200px;
-            height: 200px;
+            width: 300px; /* Increase size by 1.5x */
+            height: 300px; /* Increase size by 1.5x */
             border-radius: 50%;
             overflow: hidden;
             border: 5px solid #00ffff;
@@ -112,7 +113,7 @@
 
         .name {
             margin-top: 20px;
-            font-size: 36px;
+            font-size: 54px; /* Increase size by 1.5x */
             color: white;
             text-shadow: 0 0 10px #ff9900, 0 0 20px #ff9900, 0 0 30px #ff9900;
             position: relative;
@@ -205,8 +206,7 @@
             }, 20000); // Adjust this duration to match the animation duration
         }
 
-        setInterval(createStar, 1000); // Adjust the interval to control the number of stars
+        setInterval(createStar, 500); // Increase the number of stars
     </script>
 </body>
 </html>
-
