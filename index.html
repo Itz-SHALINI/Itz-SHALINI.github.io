@@ -115,6 +115,7 @@
             border: 5px solid #ffffff;
             box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
             margin-right: 20px;
+            margin-bottom: -10px; /* Move the circle up */
         }
 
         .circle img {
@@ -124,16 +125,24 @@
         }
 
         .about {
-            margin-top: -20px;
             text-align: left;
             font-size: 20px;
             color: white;
             text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+            line-height: 1.2;
+        }
+
+        .about p {
+            margin: 5px 0;
+        }
+
+        .about p:first-child {
+            text-decoration: underline;
         }
 
         .name {
             margin-top: 10px;
-            font-size: 40px; /* Increase size by 1.5x */
+            font-size: 26.67px; /* Decrease size by 1.5x */
             color: white;
             text-shadow: 0 0 10px #ff9900, 0 0 20px #ff9900, 0 0 30px #ff9900;
             position: relative;
