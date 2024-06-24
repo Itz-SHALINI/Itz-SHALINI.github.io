@@ -91,10 +91,12 @@
             background: rgba(0, 0, 0, 0.2);
             border: 2px solid #00ffff;
             box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff; /* Adjusted box-shadow */
-            padding: 39px; /* Increase size by 1.5x */
+            padding: 30px; /* Increase size by 1.5x */
             border-radius: 15px;
             display: inline-block;
             animation: neonGlow 9s infinite; /* Faster color changing */
+            display: flex;
+            align-items: center;
         }
 
         @keyframes neonGlow {
@@ -106,13 +108,13 @@
         }
 
         .circle {
-            width: 180px; /* Increase size by 1.5x */
-            height: 180px; /* Increase size by 1.5x */
+            width: 120px; /* Decrease size */
+            height: 120px; /* Decrease size */
             border-radius: 50%;
             overflow: hidden;
             border: 5px solid #ffffff;
             box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
-            margin: 0 auto;
+            margin-right: 20px;
         }
 
         .circle img {
@@ -122,8 +124,7 @@
         }
 
         .about {
-            margin-top: -140px;
-            margin-left: 200px;
+            margin-top: -20px;
             text-align: left;
             font-size: 20px;
             color: white;
@@ -131,7 +132,7 @@
         }
 
         .name {
-            margin-top: 20px;
+            margin-top: 10px;
             font-size: 40px; /* Increase size by 1.5x */
             color: white;
             text-shadow: 0 0 10px #ff9900, 0 0 20px #ff9900, 0 0 30px #ff9900;
@@ -139,7 +140,7 @@
         }
 
         .glow-button {
-            margin-top: 20px;
+            margin-top: 10px;
             padding: 10px 20px;
             font-size: 24px;
             color: white;
@@ -207,13 +208,15 @@
             <div class="circle">
                 <img src="https://telegra.ph/file/297daf535e6eade503f47.jpg" alt="Profile Picture">
             </div>
-            <div class="about">
-                <p>About</p>
-                <p>Bot Developer</p>
-                <p>Python & Pyrogram</p>
+            <div>
+                <div class="about">
+                    <p>About</p>
+                    <p>Bot Developer</p>
+                    <p>Python & Pyrogram</p>
+                </div>
+                <div class="name">𝐒𝐇𝐀𝐋𝐈𝐍𝐈</div>
+                <button class="glow-button" onclick="window.open('https://www.instagram.com/Itz_Shalini.69/', '_blank')">Follow on Instagram</button>
             </div>
-            <div class="name">𝐒𝐇𝐀𝐋𝐈𝐍𝐈</div>
-            <button class="glow-button" onclick="window.open('https://www.instagram.com/Itz_Shalini.69/', '_blank')">Follow on Instagram</button>
         </div>
     </div>
     <div class="stars"></div>
