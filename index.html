@@ -8,12 +8,19 @@
         body, html {
             height: 100%;
             margin: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #404040, #1b1b1b);
+            background-size: 200% 200%;
+            transition: background 0.5s;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #404040, #1b1b1b);
-            background-size: 100% 100%;
-            transition: background 0.5s;
+        }
+
+        @keyframes moveBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .toggle-container {
@@ -76,6 +83,7 @@
 
         .container {
             text-align: center;
+            z-index: 1;
         }
 
         .neon-box {
@@ -110,6 +118,36 @@
             text-shadow: 0 0 10px #ff9900, 0 0 20px #ff9900, 0 0 30px #ff9900;
             position: relative;
         }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+            border-radius: 50%;
+            animation: moveStar 20s linear infinite;
+        }
+
+        @keyframes moveStar {
+            from {
+                transform: translate(0, 0);
+            }
+            to {
+                transform: translate(calc(var(--moveX) * 1vw), calc(var(--moveY) * 1vh));
+            }
+        }
     </style>
 </head>
 <body>
@@ -127,6 +165,7 @@
             <div class="name">SHALINI</div>
         </div>
     </div>
+    <div class="stars"></div>
 
     <script>
         const modeToggle = document.getElementById('modeToggle');
@@ -137,6 +176,22 @@
                 document.body.style.background = 'linear-gradient(135deg, #404040, #1b1b1b)';
             }
         });
+
+        function createStar() {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.setProperty('--moveX', Math.random() * 10 - 5);
+            star.style.setProperty('--moveY', Math.random() * 10 - 5);
+            document.querySelector('.stars').appendChild(star);
+
+            setTimeout(() => {
+                star.remove();
+            }, 20000); // Adjust this duration to match the animation duration
+        }
+
+        setInterval(createStar, 1000); // Adjust the interval to control the number of stars
     </script>
 </body>
 </html>
