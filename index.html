@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -84,38 +84,35 @@
         .container {
             text-align: center;
             z-index: 1;
-            margin-top: 90px;
+            margin-top: 100px; /* Move the container down */
         }
 
         .neon-box {
             background: rgba(0, 0, 0, 0.2);
             border: 2px solid #00ffff;
-            box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-            padding: 40px;
+            box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff; /* Adjusted box-shadow */
+            padding: 39px; /* Increase size by 1.5x */
             border-radius: 15px;
             display: inline-block;
-            animation: neonGlow 9s infinite;
-            position: relative;
-            display: flex;
-            align-items: center;
+            animation: neonGlow 9s infinite; /* Faster color changing */
         }
 
         @keyframes neonGlow {
-            0% { box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; }
-            25% { box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff; }
-            50% { box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; }
-            75% { box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff; }
-            100% { box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; }
+            0% { box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+            25% { box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff; } /* Adjusted box-shadow */
+            50% { box-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 30px #ffff00; }
+            75% { box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00; } /* Adjusted box-shadow */
+            100% { box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000; }
         }
 
         .circle {
-            width: 160px;
-            height: 160px;
+            width: 180px; /* Increase size by 1.5x */
+            height: 180px; /* Increase size by 1.5x */
             border-radius: 50%;
             overflow: hidden;
             border: 5px solid #ffffff;
             box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
-            margin-right: 20px;
+            margin: 0 auto;
         }
 
         .circle img {
@@ -124,17 +121,12 @@
             object-fit: cover;
         }
 
-        .about {
-            font-size: 20px;
-            color: white;
-            text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
-        }
-
         .name {
             margin-top: 20px;
-            font-size: 30px;
+            font-size: 40px; /* Increase size by 1.5x */
             color: white;
-            text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+            text-shadow: 0 0 10px #ff9900, 0 0 20px #ff9900, 0 0 30px #ff9900;
+            position: relative;
         }
 
         .glow-button {
@@ -152,12 +144,6 @@
 
         .glow-button:hover {
             box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
-        }
-
-        .glow-button:active {
-            background: #00ff00;
-            color: black;
-            box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00;
         }
 
         .stars {
@@ -198,22 +184,6 @@
                 transform: translate(calc(var(--moveX4) * 1vw), calc(var(--moveY4) * 1vh));
             }
         }
-
-        .subtitle {
-            margin-top: 20px;
-            font-size: 20px;
-            color: white;
-            font-family: 'Pacifico', cursive;
-            text-align: left;
-            position: absolute;
-            left: 20px;
-            top: 300px;
-        }
-
-        .subtitle .underline {
-            text-decoration: underline;
-            text-decoration-color: green;
-        }
     </style>
 </head>
 <body>
@@ -228,10 +198,9 @@
             <div class="circle">
                 <img src="https://telegra.ph/file/297daf535e6eade503f47.jpg" alt="Profile Picture">
             </div>
-            <div class="about">About<br>Bot Developer<br>Python & Pyrogram</div>
+            <div class="name">𝐒𝐇𝐀𝐋𝐈𝐍𝐈</div>
+            <button class="glow-button" onclick="window.open('https://www.instagram.com/Itz_Shalini.69/', '_blank')">Follow on Instagram</button>
         </div>
-        <div class="name">𝐒𝐇𝐀𝐋𝐈𝐍𝐈</div>
-        <button class="glow-button" onclick="window.open('https://www.instagram.com/Itz_Shalini.69/', '_blank')">Follow on Instagram</button>
     </div>
     <div class="stars"></div>
 
@@ -239,9 +208,9 @@
         const modeToggle = document.getElementById('modeToggle');
         modeToggle.addEventListener('change', () => {
             if (modeToggle.checked) {
-                document.body.style.background = 'linear-gradient(135deg, #3a0853, #1e1a2d)';
+                document.body.style.background = 'linear-gradient(135deg, #8e0e00, #1f1c18)';
             } else {
-                document.body.style.background = 'linear-gradient(135deg, #1a1a1a, #333333)';
+                document.body.style.background = 'linear-gradient(135deg, #404040, #1b1b1b)';
             }
         });
 
@@ -267,4 +236,6 @@
     </script>
 </body>
 </html>
+
+
 
