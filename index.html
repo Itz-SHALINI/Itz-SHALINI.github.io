@@ -9,13 +9,22 @@
             height: 100%;
             margin: 0;
             overflow: hidden;
-            background: linear-gradient(135deg, #404040, #1b1b1b);
-            background-size: cover;
-            transition: background 0.5s;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #404040, #1b1b1b);
+            z-index: -1;
+            transition: background 0.5s;
         }
 
         .toggle-container {
@@ -176,8 +185,10 @@
         const modeToggle = document.getElementById('modeToggle');
         modeToggle.addEventListener('change', () => {
             if (modeToggle.checked) {
+                document.body.style.setProperty('--bg-color', 'linear-gradient(135deg, #2b5876, #4e4376)');
                 document.body.style.background = 'linear-gradient(135deg, #2b5876, #4e4376)';
             } else {
+                document.body.style.setProperty('--bg-color', 'linear-gradient(135deg, #404040, #1b1b1b)');
                 document.body.style.background = 'linear-gradient(135deg, #404040, #1b1b1b)';
             }
         });
@@ -206,5 +217,4 @@
     </script>
 </body>
 </html>
-
 
