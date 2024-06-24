@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -95,6 +95,7 @@
             border-radius: 15px;
             display: inline-block;
             animation: neonGlow 9s infinite; /* Faster color changing */
+            position: relative; /* Added to position the About text */
         }
 
         @keyframes neonGlow {
@@ -186,9 +187,14 @@
         }
 
         .subtitle {
-            margin-top: 10px;
-            font-size: 14px;
+            margin-top: 20px;
+            font-size: 20px; /* Increase text size */
             color: white;
+            font-family: 'Pacifico', cursive; /* Stylish font */
+            text-align: left; /* Align text to the left */
+            position: absolute;
+            left: 20px; /* Position to the left */
+            top: 150px; /* Adjust as needed to align correctly */
         }
 
         .subtitle .underline {
