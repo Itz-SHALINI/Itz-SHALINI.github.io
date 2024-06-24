@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-        
         body {
             margin: 0;
             padding: 0;
@@ -89,20 +88,21 @@
         }
 
         .neon-box {
-            background: rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.2);
             border: 2px solid #00ffff;
+            box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
             padding: 45px; /* Increase size by 1.5x */
             border-radius: 15px;
             display: inline-block;
-            animation: neonGlow 2s infinite;
+            animation: neonGlow 1s infinite; /* Faster color changing */
         }
 
         @keyframes neonGlow {
             0% { box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff; }
-            25% { box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000; }
-            50% { box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00; }
-            75% { box-shadow: 0 0 20px #0000ff, 0 0 40px #0000ff, 0 0 60px #0000ff; }
-            100% { box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff; }
+            25% { box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff; }
+            50% { box-shadow: 0 0 20px #ffff00, 0 0 40px #ffff00, 0 0 60px #ffff00; }
+            75% { box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00; }
+            100% { box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000; }
         }
 
         .circle {
@@ -125,21 +125,22 @@
             margin-top: 20px;
             font-size: 50px; /* Increase size by 1.5x */
             color: white;
-            font-family: 'Pacifico', cursive;
             text-shadow: 0 0 10px #ff9900, 0 0 20px #ff9900, 0 0 30px #ff9900;
             position: relative;
+            font-family: 'Pacifico', cursive; /* Apply new font */
         }
 
         .glow-button {
             margin-top: 20px;
             padding: 10px 20px;
-            font-size: 20px;
+            font-size: 24px;
             color: white;
+            background: transparent;
             border: 2px solid #00ffff;
-            background: rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: box-shadow 0.5s;
+            box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+            transition: all 0.3s ease-in-out;
         }
 
         .glow-button:hover {
@@ -199,7 +200,7 @@
                 <img src="https://telegra.ph/file/297daf535e6eade503f47.jpg" alt="Profile Picture">
             </div>
             <div class="name">SHALINI</div>
-            <button class="glow-button" onclick="window.open('https://instagram.com/Itz_Shalini.69', '_blank')">Instagram</button>
+            <button class="glow-button" onclick="window.open('https://www.instagram.com/Itz_Shalini.69/', '_blank')">Follow on Instagram</button>
         </div>
     </div>
     <div class="stars"></div>
@@ -228,13 +229,12 @@
             star.style.setProperty('--moveX4', Math.random() * 10 - 5);
             star.style.setProperty('--moveY4', Math.random() * 10 - 5);
             document.querySelector('.stars').appendChild(star);
-
-            setTimeout(() => {
-                star.remove();
-            }, 40000); // Adjust this duration to match the animation duration
         }
 
-        setInterval(createStar, 500); // Increase the number of stars
+        for (let i = 0; i < 100; i++) {
+            createStar();
+        }
     </script>
 </body>
 </html>
+
