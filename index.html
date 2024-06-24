@@ -11,21 +11,67 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #1e3c72, #2a5298),
-                        linear-gradient(135deg, #9d50bb, #6e48aa),
-                        linear-gradient(135deg, #2b5876, #4e4376),
-                        linear-gradient(135deg, #1e3c72, #2a5298),
-                        linear-gradient(135deg, #8e0e00, #1f1c18),
-                        linear-gradient(135deg, #2b5876, #4e4376),
-                        linear-gradient(135deg, #404040, #1b1b1b);
+            background: linear-gradient(135deg, #404040, #1b1b1b);
             background-size: 100% 100%;
-            animation: gradientBackground 30s ease infinite;
+            transition: background 0.5s;
         }
 
-        @keyframes gradientBackground {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        .toggle-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
         }
 
         .container {
@@ -36,14 +82,14 @@
             background: rgba(0, 0, 0, 0.6);
             border: 2px solid #00ffff;
             box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
-            padding: 20px;
+            padding: 40px;
             border-radius: 15px;
             display: inline-block;
         }
 
         .circle {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             overflow: hidden;
             border: 5px solid #00ffff;
@@ -59,24 +105,20 @@
 
         .name {
             margin-top: 20px;
-            font-size: 24px;
+            font-size: 36px;
             color: white;
-            text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f;
+            text-shadow: 0 0 10px #ff9900, 0 0 20px #ff9900, 0 0 30px #ff9900;
             position: relative;
-        }
-
-        .name::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 2px;
-            background: white;
-            margin-top: 5px;
-            box-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f;
         }
     </style>
 </head>
 <body>
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="modeToggle">
+            <span class="slider round"></span>
+        </label>
+    </div>
     <div class="container">
         <div class="neon-box">
             <div class="circle">
@@ -85,6 +127,17 @@
             <div class="name">SHALINI</div>
         </div>
     </div>
+
+    <script>
+        const modeToggle = document.getElementById('modeToggle');
+        modeToggle.addEventListener('change', () => {
+            if (modeToggle.checked) {
+                document.body.style.background = 'linear-gradient(135deg, #2b5876, #4e4376)';
+            } else {
+                document.body.style.background = 'linear-gradient(135deg, #404040, #1b1b1b)';
+            }
+        });
+    </script>
 </body>
 </html>
 
