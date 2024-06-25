@@ -4,8 +4,346 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Caveat&family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Caveat&family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: "Poppins", sans-serif;
+      color: white;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #404040, #1b1b1b);
+      padding: 20px;
+      transition: background 0.5s;
+    }
+
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      z-index: 1000;
+    }
+
+    .loading-box {
+      position: relative;
+      width: 70%;
+      height: 10px;
+      background-color: transparent;
+      border: 2px solid blue;
+      box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+      overflow: hidden;
+    }
+
+    .neon-ray {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, #00ffff, transparent);
+      animation: moveRay 4s linear infinite;
+    }
+
+    .neon-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: linear-gradient(90deg, orange, orange);
+      width: 0%;
+      animation: fillBox 4s linear forwards;
+    }
+
+    .loading-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      color: white;
+    }
+
+    .welcome-text {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 22px;
+      color: white;
+      text-shadow: 0 0 5px orange, 0 0 10px orange, 0 0 15px orange;
+      white-space: nowrap;
+    }
+
+    @keyframes moveRay {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+
+    @keyframes fillBox {
+      0% {
+        width: 0%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+
+    .toggle-container {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 2;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: 0.4s;
+    }
+
+    input:checked + .slider {
+      background-color: #2196f3;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+
+    .container {
+      text-align: left;
+      z-index: 1;
+      margin-top: 100px;
+    }
+
+    .neon-box {
+      background: rgba(0, 0, 0, 0.2);
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+      padding: 20px;
+      border-radius: 15px;
+      display: inline-block;
+      animation: neonGlow 9s infinite;
+      display: flex;
+      align-items: center;
+    }
+
+    @keyframes neonGlow {
+      0% {
+        box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff;
+      }
+      25% {
+        box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+      }
+      50% {
+        box-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 15px #ffff00;
+      }
+      75% {
+        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+      }
+      100% {
+        box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
+      }
+    }
+
+    .circle {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #ffffff;
+      box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+      margin-right: 55px;
+      margin-bottom: 90px;
+    }
+
+    .circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about {
+      text-align: left;
+      font-size: 30px;
+      color: white;
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+      line-height: 1.2;
+      margin-top: 32px;
+      font-family: "Caveat", cursive;
+    }
+
+    .about p {
+      margin: 5px 0;
+    }
+
+    .about p:first-child {
+      text-decoration: underline;
+    }
+
+    .name {
+      margin-top: 40px;
+      margin-left: -180px;
+      font-size: 30px;
+      color: white;
+      text-shadow: 0 0 10px #ff9900, 0 0 20px #ff9900, 0 0 30px #ff9900;
+      position: relative;
+    }
+
+    .glow-button {
+      margin-top: -35px;
+      padding: 10px 20px;
+      font-size: 24px;
+      color: white;
+      background: transparent;
+      border: 2px solid #00ffff;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .glow-button:hover {
+      box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+    }
+
+    .about-me {
+      margin-top: 50px;
+      text-align: left;
+      font-size: 36px;
+      color: white;
+      text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-me::after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 2px;
+      background-color: orange;
+      margin-top: 10px;
+      box-shadow: 0 0 3px orange, 0 0 6px orange, 0 0 9px orange;
+    }
+
+    .details {
+      margin-top: 20px;
+      font-size: 20px;
+      color: white;
+      position: relative;
+      z-index: 1;
+      text-align: left;
+    }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+      border-radius: 50%;
+      animation: moveStar 40s linear infinite;
+    }
+
+    @keyframes moveStar {
+      0% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(
+          calc(var(--moveX1) * 1vw),
+          calc(var(--moveY1) * 1vh)
+        );
+      }
+      50% {
+        transform: translate(
+          calc(var(--moveX2) * 1vw),
+          calc(var(--moveY2) * 1vh)
+        );
+      }
+      75% {
+        transform: translate(
+          calc(var(--moveX3) * 1vw),
+          calc(var(--moveY3) * 1vh)
+        );
+      }
+      100% {
+        transform: translate(
+          calc(var(--moveX4) * 1vw),
+          calc(var(--moveY4) * 1vh)
+        );
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="loading-screen">
@@ -13,7 +351,7 @@
     <div class="loading-box">
       <div class="neon-ray"></div>
       <div class="neon-fill"></div>
-      <div class="loading-text">0%</</div>
+      <div class="loading-text">0%</div>
     </div>
   </div>
 
@@ -26,7 +364,10 @@
   <div class="container">
     <div class="neon-box">
       <div class="circle">
-        <img src="https://telegra.ph/file/297daf535e6eade503f47.jpg" alt="Profile Picture" />
+        <img
+          src="https://telegra.ph/file/297daf535e6eade503f47.jpg"
+          alt="Profile Picture"
+        />
       </div>
       <div>
         <div class="about">
@@ -35,7 +376,12 @@
           <p>Python & Pyrogram</p>
         </div>
         <div class="name">𝐒𝐇𝐀𝐋𝐈𝐍𝐈</div>
-        <button class="glow-button" onclick="window.open('https://www.instagram.com/Itz_Shalini.69/', '_blank')">𝐅𝐎𝐋𝐋𝐎𝐖</button>
+        <button
+          class="glow-button"
+          onclick="window.open('https://www.instagram.com/Itz_Shalini.69/', '_blank')"
+        >
+          𝐅𝐎𝐋𝐋𝐎𝐖
+        </button>
       </div>
     </div>
   </div>
@@ -56,9 +402,11 @@
     const modeToggle = document.getElementById("modeToggle");
     modeToggle.addEventListener("change", () => {
       if (modeToggle.checked) {
-        document.body.style.background = "linear-gradient(135deg, #2e003e, #22007c)";
+        document.body.style.background =
+          "linear-gradient(135deg, #2e003e, #22007c)";
       } else {
-        document.body.style.background = "linear-gradient(135deg, #1a1a1a, #333333)";
+        document.body.style.background =
+          "linear-gradient(135deg, #1a1a1a, #333333)";
       }
     });
 
@@ -78,7 +426,7 @@
       document.querySelector(".stars").appendChild(star);
     }
 
-    for (let i = 0; i < 50; {
+    for (let i = 0; i < 50; i++) {
       createStar();
     }
 
@@ -97,4 +445,5 @@
   </script>
 </body>
 </html>
+
 
