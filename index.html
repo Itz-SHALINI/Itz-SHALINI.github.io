@@ -18,10 +18,10 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start; /* Align items to the left */
         min-height: 100vh;
         background: linear-gradient(135deg, #404040, #1b1b1b);
-        padding-top: 20px;
+        padding: 20px; /* Add padding for spacing */
         transition: background 0.5s;
       }
 
@@ -54,7 +54,7 @@
         bottom: 0;
         background-color: #ccc;
         transition: 0.4s;
-        box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+        box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff; /* Reduced glowness */
       }
 
       .slider:before {
@@ -85,7 +85,7 @@
       }
 
       .container {
-        text-align: center;
+        text-align: left; /* Align text to the left */
         z-index: 1;
         margin-top: 100px; /* Move the container down */
       }
@@ -104,19 +104,19 @@
 
       @keyframes neonGlow {
         0% {
-          box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+          box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff; /* Reduced glowness */
         }
         25% {
-          box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-        } /* Adjusted box-shadow */
+          box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff; /* Reduced glowness */
+        }
         50% {
-          box-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 30px #ffff00;
+          box-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 15px #ffff00; /* Reduced glowness */
         }
         75% {
-          box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
-        } /* Adjusted box-shadow */
+          box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00; /* Reduced glowness */
+        }
         100% {
-          box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+          box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000; /* Reduced glowness */
         }
       }
 
@@ -126,7 +126,7 @@
         border-radius: 50%;
         overflow: hidden;
         border: 5px solid #ffffff;
-        box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+        box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff; /* Reduced glowness */
         margin-right: 55px;
         margin-bottom: 90px; /* Move the circle up */
       }
@@ -141,7 +141,7 @@
         text-align: left;
         font-size: 30px;
         color: white;
-        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+        text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff; /* Reduced glowness */
         line-height: 1.2;
         margin-top: 32px; /* Move the about text down */
         font-family: "Caveat", cursive; /* Stylish font */
@@ -157,10 +157,9 @@
 
       .name {
         margin-top: 45px;
-        margin-left: -510px;
         font-size: 30px; /* Decrease size by 1.5x */
         color: white;
-        text-shadow: 0 0 10px #ff9900, 0 0 20px #ff9900, 0 0 30px #ff9900;
+        text-shadow: 0 0 5px #ff9900, 0 0 10px #ff9900, 0 0 15px #ff9900; /* Reduced glowness */
         position: relative;
       }
 
@@ -173,12 +172,42 @@
         border: 2px solid #00ffff;
         border-radius: 10px;
         cursor: pointer;
-        box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+        box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff; /* Reduced glowness */
         transition: all 0.3s ease-in-out;
       }
 
       .glow-button:hover {
-        box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
+        box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+      }
+
+      .about-me {
+        margin-top: 50px;
+        text-align: left; /* Align text to the left */
+        font-size: 36px;
+        color: blue; /* Changed to blue */
+        text-shadow: 0 0 5px blue, 0 0 10px blue, 0 0 15px blue; /* Reduced glowness */
+        position: relative;
+        z-index: 1;
+      }
+
+      .about-me::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 2px;
+        background-color: blue;
+        margin-top: 10px;
+        box-shadow: 0 0 5px blue, 0 0 10px blue, 0 0 15px blue; /* Reduced glowness */
+      }
+
+      .details {
+        margin-top: 20px;
+        font-size: 20px;
+        color: white;
+        text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white; /* Reduced glowness */
+        position: relative;
+        z-index: 1;
+        text-align: left; /* Align text to the left */
       }
 
       .stars {
@@ -197,7 +226,7 @@
         width: 2px;
         height: 2px;
         background: white;
-        box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+        box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white; /* Reduced glowness */
         border-radius: 50%;
         animation: moveStar 20s linear infinite;
       }
@@ -264,6 +293,19 @@
         </div>
       </div>
     </div>
+
+    <div class="about-me">About Me</div>
+    <div class="details">
+      <p>Name ~ SHALINI</p>
+      <p>AGE ~ UNKNOWN</p>
+      <p>Insta id ~ Itz_Shalini.69</p>
+      <p>FF id ~ Not Found</p>
+      <p>CLASS ~ Graduated (Software Developer)</p>
+      <p>Hobbies ~ Learning Coding, Bot Making, Making Viruses</p>
+      <p>Languages ~ English, Hindi, Telugu, Tamil, Kannada</p>
+      <p>Boyfriend ~ No Need 👀</p>
+    </div>
+
     <div class="stars"></div>
 
     <script>
