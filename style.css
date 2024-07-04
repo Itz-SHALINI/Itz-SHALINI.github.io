@@ -6,15 +6,18 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: black;
-    background-image: url('https://telegra.ph/file/1c50d69c13f8781b64afc.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+  color: #2b2c48;
+  font-family: "Jost", sans-serif;
+  background-image: url("https://telegra.ph/file/1c50d69c13f8781b64afc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
 
 .toggle-switch {
   position: absolute;
