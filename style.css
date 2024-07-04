@@ -426,7 +426,7 @@ body {
   z-index: 1;
   color: black;
   line-height: 0; /* Keeps the text compact */
-  top: -6px; /* Adjust this value to move the text upwards */
+  top: -8px; /* Adjust this value to move the text upwards */
 }
 
 
