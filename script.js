@@ -24,8 +24,8 @@ const body = document.body;
 
 toggleSwitch.addEventListener('change', () => {
   if (toggleSwitch.checked) {
-    body.style.backgroundImage = "url('https://telegra.ph/file/538f6eb998720fcfcef6a.jpg')";
+    body.style.backgroundImage = "url('S/NightMode.png')";
   } else {
-    body.style.backgroundImage = "url('https://telegra.ph/file/1c50d69c13f8781b64afc.jpg')";
+    body.style.backgroundImage = "url('S/DayMode.png')";
   }
 });
