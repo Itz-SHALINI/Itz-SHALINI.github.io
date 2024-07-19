@@ -1,353 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SHALINI PORTFOLIO</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="style.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body>
-  <div class="toggle-switch">
-    <input type="checkbox" id="background-toggle">
-    <label for="background-toggle"></label>
-  </div>
-  <div class="card" data-state="#about">
-    <div class="card-header">
-      <div class="card-cover" style="background-image: url('S/CoverDp.png')"></div>
-      <img class="card-avatar" src="S/shalini.png" alt="avatar" />
-      <h1 class="card-fullname">SHALINI SHALU</h1>
-      <h2 class="card-jobtitle">Python Bot Developer</h2>
-    </div>
-    <div class="card-main">
-      <div class="card-section is-active" id="about">
-        <div class="card-content">
-          <div class="card-subtitle">ABOUT ME</div>
-          <p class="card-desc">My Name Is SHALINI, A CS Student, Learning Coding, Virus Making, Bot Developing.</p>
-          <p class="card-desc">Age - Unknown</p>
-          <p class="card-desc">Instagram - ITZ_SHALINI.69</p>
-          <p class="card-desc">GITHUB - ITZ-SHALINI</p>
-        </div>
-      </div>
-      <div class="card-section" id="contact">
-        <div class="card-content">
-          <div class="card-subtitle">Click Below Button To Contact Me</div>
-          <div class="card-contact-wrapper">
-            <button class="contact-me" onclick="launchUrl()"><span>Click</span></button>
-          </div>
-        </div>
-      </div>
-      <div class="card-buttons">
-        <button data-section="#about" class="is-active">ABOUT</button>
-        <button data-section="#contact">CONTACT</button>
-      </div>
-    </div>
-  </div>
-   <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
+<div class="loader">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    <div class="bar4"></div>
+    <div class="bar5"></div>
+    <div class="bar6"></div>
 </div>
-  <script src="./script.js"></script>
-  <script>
-    function launchUrl() {
-      window.location.href = "https://Instagram.com/Itz_SHALINI.69";
-    }
-  </script>
+<div id="portfolio-content" style="display: none;">
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="shaliniimg">
+        <img src="S/shalini.png" alt="">
+    </div>
+    <div class="radhe-radhe">Hello Everyone Its Me</div>
+    <div class="shalini-text">SHALINI</div>
+    <div class="Ima">Im A <span id="element"></span></div>
+    <div class="about-text">About Me</div>
+    <div class="about-me-content">
+        Radhe Radhe My Name Is SHALINI SHALU Im A Student  <br>
+        And Im From Goa, Currently Learning Coding <br>
+        and Making Powerful Viruses And Selling Them,  <br>
+        But Currently I Leaved All Platforms And Now Waiting  <br>
+        For ........
+    </div>
+    <div class="more-about-me-container">
+        <div class="more-about-me">
+            <a href="https://Instagram.com/itz_shalini.35">More About Me</a>
+        </div>
+    </div>
+    <div class="about-text">Skills</div>
+    <section class="skills">
+        <div class="container1" id="skills">
+            <h1 class="heading1"></h1>
+            <div class="Technical-bars">
+                <div class="bar"><i class='bx bxl-python' style='color: orange'></i>
+                    <div class="info"><span>PYTHON</span></div>
+                    <div class="progess-line python"><span></span></div>
+                </div>  
+                <div class="bar"><i class='bx bxl-html5' style='color:#c95d2e'></i>
+                    <div class="info"><span>HTML</span></div>
+                    <div class="Sprogess-line html"><span></span></div>
+                </div>
+                <div class="bar"><i class='bx bxl-css3' style='color:#147bbc'></i>
+                    <div class="info"><span>CSS</span></div>
+                    <div class="progess-line css"><span></span></div>
+                </div>
+                <div class="bar"><i class='bx bxl-javascript' style='color:#69bcbc'></i>
+                    <div class="info"><span>JAVASCRIPT</span></div>
+                    <div class="jprogess-line javascript"><span></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="container1">
+            <h1 class="heading1"></h1>
+            <div class="radial-bars">
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">90%</div>
+                    <div class="text">Creativity</div>
+                </div>
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path Sanimate-path" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">45%</div>
+                    <div class="text">Communication</div>
+                </div>
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="Tpath Sanimate-path" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">80%</div>
+                    <div class="text">Problem Solving</div>
+                </div>
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="TTpath TTanimate-path" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">60%</div>
+                    <div class="text">TeamWork</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="contact-text">Contact Me</div>
+    <div class="contact-me-text">
+        Click The Below Buttons To Contact Me But <br>
+        I Can See Your Messages Only On Instagram <br>
+        Because I Leaved All Platforms...
+    </div>
+    <div class="social-media">
+        <a href="https://t.me/itz_Shalini" style="--i:6"><i class='bx bxl-telegram'></i></a>
+        <a href="https://Instagram.com/itz_shalini.35" style="--i:7"><i class='bx bxl-instagram'></i></a>
+        <a href="mailto:shivanishalini000@gmail.com" style="--i:8"><i class='bx bxl-gmail'></i></a>
+        <a href="https://github.com/Itz-Shalini" style="--i:8"><i class='bx bxl-github'></i></a>
+    </div>
+    <div class="lds-heart"><div></div></div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
+
