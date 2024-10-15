@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 portfolioContent.style.transition = 'opacity 1s ease';
             }, 50);
         }, 600);
-    }, 4400);
+    }, 4000);
 });
 
 const images = ['images/shalini.png', 'images/shalini2.png', 'images/shalini3.png', 'images/shalini4.png', 'images/shalini5.png'];
