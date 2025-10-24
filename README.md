@@ -1,6 +1,6 @@
 # Welcome To My Portfolio
 
-![Shalini](images/shalini.png)
+![Shalini](https://iili.io/KgU9TJ4.png)
 
 <center>
   
@@ -12,7 +12,7 @@
 
 ## About Me
 
-Hello! My name is **Shalini Shalu**, and I am 20 years old. I’m a passionate **Full Stack Front-End Developer** from Goa, with a love for bringing creative visions to life through vibrant web designs.
+Hello! My name is **Shalini Shalu**, and I am 22 years old. I’m a passionate **Full Stack Developer** from Goa, with a love for bringing creative visions to life through vibrant web designs.
 
 I enjoy diving deep into coding challenges, especially when it comes to crafting elegant and interactive websites that captivate users. Building the perfect interface is my art, and coding is my tool.
 
